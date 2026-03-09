@@ -102,7 +102,7 @@ public class Program
         Console.WriteLine("        ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
         Console.WriteLine("        █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█");
         Console.WriteLine("        █  Created by: IVKE ░░░░░░░░░░░░░░░░░░░█");
-        Console.WriteLine("        █  *** UPDATE v1.0.3 FIX *** ░░░░░░░░░░█");
+        Console.WriteLine("        █  *** UPDATE v1.0.4 FIX *** ░░░░░░░░░░█");
         Console.WriteLine("        █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█");
         Console.WriteLine("        ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
         Console.WriteLine();
@@ -265,8 +265,14 @@ public class Program
             PrintSuccess("Update downloaded!");
 
             string batchContent = $@"@echo off
-timeout /t 2 /nobreak >nul
-copy /y ""{newExePath}"" ""{currentExePath}""
+setlocal enabledelayedexpansion
+timeout /t 3 /nobreak >nul
+:retry
+copy /y ""{newExePath}"" ""{currentExePath}"" 2>nul
+if errorlevel 1 (
+    timeout /t 1 /nobreak >nul
+    goto retry
+)
 del ""{newExePath}""
 start """" ""{currentExePath}""
 del ""%~f0""
@@ -290,6 +296,8 @@ del ""%~f0""
                 CreateNoWindow = true
             };
             Process.Start(psi);
+
+            Environment.Exit(0);
 
             return true;
         }
