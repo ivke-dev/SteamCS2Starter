@@ -101,14 +101,15 @@ public class Program
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("        ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
         Console.WriteLine("        █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█");
-        Console.WriteLine("        █  Created by: IVKE ░░░░░░░░░░░░░░░░░░░█");
-        Console.WriteLine("        █  *** UPDATE v1.0.4 FIX *** ░░░░░░░░░░█");
+        Console.WriteLine("        █      Created by: IVKE      ░░░░░░░░░░█");
         Console.WriteLine("        █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█");
         Console.WriteLine("        ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
         Console.WriteLine();
         
-        Console.ForegroundColor = ConsoleColor.DarkGray;
-        Console.WriteLine($"        Version: {CurrentVersion}");
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.Write($"        Version: ");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine($"{CurrentVersion}");
         Console.WriteLine();
         Console.ResetColor();
     }
@@ -208,16 +209,19 @@ public class Program
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine();
             Console.WriteLine(@"
-   ╔═══════════════════════════════════════════╗
-   ║                                           ║
-   ║     █████╗  ██████╗ ██████╗██╗██╗   ██╗███████╗███╗   ███╗███████╗██████╗ ███████╗██████╗  ██████╗ ████████╗███████╗██╗     ██╗ ██████╗ ██████╗  ██████╗  █████╗ ████████╗███████╗
-   ║    ██╔══██╗██╔════╝██╔════╝██║██║   ██║██╔════╝████╗ ████║██╔════╝██╔══██╗██╔════╝██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝██║     ██║██╔════╝ ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝
-   ║    ███████║██║     ██║     ██║██║   ██║███████╗██╔████╔██║█████╗  ██████╔╝█████╗  ██████╔╝██║   ██║   ██║   █████╗  ██║     ██║██║  ███╗██████╔╝██║   ██║███████║   ██║   █████╗  
-   ║    ██╔══██║██║     ██║     ██║╚██╗ ██╔╝╚════██║██║╚██╔╝██║██╔══╝  ██╔══██╗██╔══╝  ██╔══██╗██║   ██║   ██║   ██╔══╝  ██║     ██║██║   ██║██╔══██╗██║   ██║██╔══██║   ██║   ██╔══╝  
-   ║    ██║  ██║╚██████╗╚██████╗██║ ╚████╔╝ ███████║██║ ╚═╝ ██║███████╗██║  ██║███████╗██████╔╝╚██████╔╝   ██║   ███████╗███████╗╚██████╔╝╚██████╔╝██║  ██║   ██║   ███████╗
-   ║    ╚═╝  ╚═╝ ╚═════╝ ╚═════╝╚═╝  ╚═══╝  ╚══════╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝
-   ║                                           ║
-   ╚═══════════════════════════════════════════╝
+       ██████╗ ███████╗████████╗██████╗  ██████╗ ██╗  ██╗██╗   ██╗███████╗    ██████╗ ██╗   ██╗██████╗ ███████╗██████╗ ███████╗██████╗ 
+       ██╔══██╗██╔════╝╚══██╔══╝██╔══██╗██╔═══██╗██║  ██║╚██╗ ██╔╝██╔════╝   ██╔══██╗██║   ██║██╔══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗
+       ██████╔╝█████╗     ██║   ██████╔╝██║   ██║███████║ ╚████╔╝ █████╗     ██████╔╝██║   ██║██████╔╝█████╗  ██████╔╝█████╗  
+       ██╔══██╗██╔══╝     ██║   ██╔══██╗██║   ██║██╔══██║  ╚██╔╝  ██╔══╝     ██╔══██╗██║   ██║██╔══██╗██╔══╝  ██╔══██╗██╔══╝  
+       ██║  ██║███████╗   ██║   ██║  ██║╚██████╔╝██║  ██║   ██║   ███████╗   ██║  ██║╚██████╔╝██████╔╝███████╗██║  ██║███████╗
+       ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝   ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚══════╝
+                                                                       
+          ██████╗██████╗ ██╗   ██╗██████╗ ████████╗████████╗███████╗███╗   ███╗
+         ██╔════╝██╔══██╗╚██╗ ██╔╝██╔══██╗╚══██╔══╝╚══██╔══╝██╔════╝████╗ ████║
+         ██║     ██████╔╝ ╚████╔╝ ██████╔╝   ██║      ██║   █████╗  ██╔████╔██║
+         ██║     ██╔══██╗  ╚██╔╝  ██╔═══╝    ██║      ██║   ██╔══╝  ██║╚██╔╝██║
+         ╚██████╗██║  ██║   ██║   ██║        ██║      ██║   ███████╗██║ ╚═╝ ██║
+          ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝        ╚═╝      ╚═╝   ╚══════╝╚═╝     ╚═╝
             ");
             Console.ResetColor();
             Console.WriteLine();
@@ -282,12 +286,28 @@ del ""%~f0""
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine();
-            Console.WriteLine("  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓");
-            Console.WriteLine("  ▓▓  Update ready! Restarting app...  ▓▓");
-            Console.WriteLine("  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓");
+            Console.WriteLine(@"      ╔════════════════════════════════════════════════════════════╗
+      ║                                                            ║
+      ║         ██████╗ ██████╗  █████╗ ███╗   ██╗████████╗███████╗██╗         ║
+      ║         ██╔══██╗██╔══██╗██╔══██╗████╗  ██║╚══██╔══╝██╔════╝██║         ║
+      ║         ██████╔╝██████╔╝███████║██╔██╗ ██║   ██║   █████╗  ██║         ║
+      ║         ██╔═══╝ ██╔══██╗██╔══██║██║╚██╗██║   ██║   ██╔══╝  ██║         ║
+      ║         ██║     ██║  ██║██║  ██║██║ ╚████║   ██║   ███████╗███████╗    ║
+      ║         ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚══════╝    ║
+      ║                                                            ║
+      ║              ██████╗██████╗ ██╗   ██╗██████╗ ████████╗      ║
+      ║             ██╔════╝██╔══██╗╚██╗ ██╔╝██╔══██╗╚══██╔══╝      ║
+      ║             ██║     ██████╔╝ ╚████╔╝ ██████╔╝   ██║         ║
+      ║             ██║     ██╔══██╗  ╚██╔╝  ██╔═══╝    ██║         ║
+      ║             ╚██████╗██║  ██║   ██║   ██║        ██║         ║
+      ║              ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝        ╚═╝         ║
+      ║                                                            ║
+      ╚════════════════════════════════════════════════════════════╝
+            ");
             Console.ResetColor();
+            Console.WriteLine();
 
-            Thread.Sleep(1500);
+            Thread.Sleep(2000);
 
             ProcessStartInfo psi = new()
             {
@@ -310,27 +330,29 @@ del ""%~f0""
 
     private static void ShowProgressBar(int progress, string message)
     {
-        int barWidth = 30;
+        int barWidth = 50;
         int filled = (int)((barWidth * progress) / 100);
         
         Console.ForegroundColor = ConsoleColor.DarkGray;
-        Console.Write("\r  ");
+        Console.Write("\r       ");
         Console.ResetColor();
         
         Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.Write("▓");
+        Console.Write("█");
         for (int i = 0; i < filled - 1 && i < barWidth - 1; i++)
-            Console.Write("▓");
+            Console.Write("█");
         
         Console.ForegroundColor = ConsoleColor.DarkGray;
         for (int i = filled; i < barWidth; i++)
             Console.Write("░");
         
         Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.Write("▓ ");
+        Console.Write("█ ");
         Console.ResetColor();
         
-        Console.Write($"{message} ({progress}%)");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.Write($"{message}: {progress}%");
+        Console.ResetColor();
     }
 
     public static async Task Main(string[] args)
