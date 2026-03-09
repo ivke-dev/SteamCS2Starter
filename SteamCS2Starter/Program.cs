@@ -102,7 +102,7 @@ public class Program
         Console.WriteLine("        ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
         Console.WriteLine("        █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█");
         Console.WriteLine("        █  Created by: IVKE ░░░░░░░░░░░░░░░░░░░█");
-        Console.WriteLine("        █  *** UPDATE TEST v1.0.2 *** ░░░░░░░░░░░█");
+        Console.WriteLine("        █  *** UPDATE v1.0.3 FIX *** ░░░░░░░░░░█");
         Console.WriteLine("        █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█");
         Console.WriteLine("        ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
         Console.WriteLine();
@@ -222,6 +222,13 @@ public class Program
             Console.ResetColor();
             Console.WriteLine();
 
+            string currentExePath = Environment.ProcessPath ?? "SteamCS2Starter.exe";
+            string updateFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SteamCS2Starter", "Updates");
+            Directory.CreateDirectory(updateFolder);
+            
+            string newExePath = Path.Combine(updateFolder, "SteamCS2Starter_new.exe");
+            string batchPath = Path.Combine(updateFolder, "update.bat");
+
             using HttpClient client = new();
             client.Timeout = TimeSpan.FromMinutes(5);
 
@@ -229,12 +236,9 @@ public class Program
             response.EnsureSuccessStatusCode();
 
             long totalBytes = response.Content.Headers.ContentLength ?? -1;
-            string exePath = Environment.ProcessPath ?? "SteamCS2Starter.exe";
-            string tempPath = exePath + ".tmp";
-            string backupPath = exePath + ".bak";
 
             using var stream = await response.Content.ReadAsStreamAsync();
-            using var fileStream = new FileStream(tempPath, FileMode.Create, FileAccess.Write, FileShare.None);
+            using var fileStream = new FileStream(newExePath, FileMode.Create, FileAccess.Write, FileShare.None);
 
             byte[] buffer = new byte[8192];
             long totalRead = 0;
@@ -260,27 +264,30 @@ public class Program
             Console.WriteLine();
             PrintSuccess("Update downloaded!");
 
-            if (File.Exists(backupPath))
-                File.Delete(backupPath);
+            string batchContent = $@"@echo off
+timeout /t 2 /nobreak >nul
+copy /y ""{newExePath}"" ""{currentExePath}""
+del ""{newExePath}""
+start """" ""{currentExePath}""
+del ""%~f0""
+";
 
-            if (File.Exists(exePath))
-                File.Move(exePath, backupPath);
-
-            File.Move(tempPath, exePath);
+            await File.WriteAllTextAsync(batchPath, batchContent);
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine();
             Console.WriteLine("  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓");
-            Console.WriteLine("  ▓▓  Update complete! Restarting...  ▓▓");
+            Console.WriteLine("  ▓▓  Update ready! Restarting app...  ▓▓");
             Console.WriteLine("  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓");
             Console.ResetColor();
 
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
 
             ProcessStartInfo psi = new()
             {
-                FileName = exePath,
-                UseShellExecute = true
+                FileName = batchPath,
+                UseShellExecute = true,
+                CreateNoWindow = true
             };
             Process.Start(psi);
 
