@@ -293,15 +293,36 @@ public class Program
 
             string batchContent = $@"@echo off
 setlocal enabledelayedexpansion
-timeout /t 3 /nobreak >nul
+echo Waiting for process to close...
+timeout /t 5 /nobreak >nul
+
+echo Killing any remaining processes...
+taskkill /F /IM SteamCS2Starter.exe 2>nul
+
+timeout /t 2 /nobreak >nul
+
+echo Updating...
+set attempts=0
 :retry
+set /a attempts+=1
 copy /y ""{newExePath}"" ""{currentExePath}"" 2>nul
 if errorlevel 1 (
-    timeout /t 1 /nobreak >nul
-    goto retry
+    if %attempts% LSS 10 (
+        timeout /t 2 /nobreak >nul
+        goto retry
+    )
+    echo Failed to update after 10 attempts
+    pause
+    exit /b 1
 )
-del ""{newExePath}""
+
+echo Cleaning up...
+del ""{newExePath}"" 2>nul
+
+echo Starting updated version...
 start """" ""{currentExePath}""
+
+echo Done!
 del ""%~f0""
 ";
 

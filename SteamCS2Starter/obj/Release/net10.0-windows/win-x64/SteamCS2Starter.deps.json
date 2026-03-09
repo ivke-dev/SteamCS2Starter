@@ -7,7 +7,7 @@
   "targets": {
     ".NETCoreApp,Version=v10.0": {},
     ".NETCoreApp,Version=v10.0/win-x64": {
-      "SteamCS2Starter/1.0.6": {
+      "SteamCS2Starter/1.0.7": {
         "dependencies": {
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "10.0.3"
         },
@@ -710,7 +710,7 @@
     }
   },
   "libraries": {
-    "SteamCS2Starter/1.0.6": {
+    "SteamCS2Starter/1.0.7": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
