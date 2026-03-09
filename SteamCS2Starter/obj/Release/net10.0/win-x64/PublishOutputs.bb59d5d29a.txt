@@ -1,0 +1,2 @@
+C:\Users\IVKE\Desktop\cheat\SteamCS2Starter\bin\Release\net10.0\win-x64\publish\SteamCS2Starter.pdb
+C:\Users\IVKE\Desktop\cheat\SteamCS2Starter\bin\Release\net10.0\win-x64\publish\SteamCS2Starter.exe
