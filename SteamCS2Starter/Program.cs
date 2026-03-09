@@ -81,42 +81,58 @@ public class Program
     private static void PrintHeader()
     {
         Console.Clear();
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.WriteLine(@"
-   ██████╗ ███████╗████████╗██████╗  ██████╗ 
-   ██╔══██╗██╔════╝╚══██╔══╝██╔══██╗██╔═══██╗
-   ██████╔╝█████╗     ██║   ██████╔╝██║   ██║
-   ██╔══██╗██╔══╝     ██║   ██╔══██╗██║   ██║
-   ██║  ██║███████╗   ██║   ██║  ██║╚██████╔╝
-   ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ 
-   ███████╗ ██████╗ ██████╗  █████╗ ██████╗ ███████╗
-   ██╔════╝██╔═══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝
-   ███████╗██║   ██║██████╔╝███████║██████╔╝█████╗  
-   ╚════██║██║   ██║██╔══██╗██╔══██║██╔═══╝ ██╔══╝  
-   ███████║╚██████╔╝██║  ██║██║  ██║██║     ███████╗
-   ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚══════╝
-        ");
+        
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+        Console.WriteLine("╔══════════════════════════════════════════════════════════════════════════════════╗");
+        Console.WriteLine("║                                                                                  ║");
         Console.ResetColor();
-        Console.WriteLine();
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("        ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
-        Console.WriteLine("        █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█");
-        Console.WriteLine("        █      Created by: IVKE      ░░░░░░░░░░█");
-        Console.WriteLine("        █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█");
-        Console.WriteLine("        ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
+        
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("║    ██████╗ ███████╗████████╗██████╗  ██████╗ ██╗  ██╗██╗   ██╗███████╗    ███████╗██████╗ ██████╗  █████╗ ██████╗  ██████╗███████╗██████╗ ███████╗    ║");
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
+        Console.WriteLine("║    ██╔══██╗██╔════╝╚══██╔══╝██╔══██╗██╔═══██╗██║  ██║╚██╗ ██╔╝██╔════╝    ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗██╔════╝    ║");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("║    ██████╔╝█████╗     ██║   ██████╔╝██║   ██║███████║ ╚████╔╝ █████╗      █████╗  ██████╔╝██████╔╝███████║██████╔╝█████╗  ██████╔╝█████╗      ║");
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
+        Console.WriteLine("║    ██╔══██╗██╔══╝     ██║   ██╔══██╗██║   ██║██╔══██║  ╚██╔╝  ██╔══╝      ██╔══╝  ██╔══██╗██╔══██╗██╔══██║██╔══██╗██╔══╝  ██╔══██╗██╔══╝      ║");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("║    ██║  ██║███████╗   ██║   ██║  ██║╚██████╔╝██║  ██║   ██║   ███████╗    ███████╗██║  ██║██║  ██║██║  ██║██║  ██║███████╗██║  ██║███████╗    ║");
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
+        Console.WriteLine("║    ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝    ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝    ║");
+        
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+        Console.WriteLine("║                                                                                  ║");
+        Console.WriteLine("╚══════════════════════════════════════════════════════════════════════════════════╝");
+        Console.ResetColor();
+        
         Console.WriteLine();
         
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.Write($"        Version: ");
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.WriteLine($"{CurrentVersion}");
-        Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.Write("                       ╔═══════════════════════════════════════╗");
+        Console.WriteLine("                       ║");
+        Console.Write("                       ║      ");
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.Write("Created by: ");
+        Console.ForegroundColor = ConsoleColor.Magenta;
+        Console.Write("IVKE");
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.Write("                       ║");
+        Console.WriteLine("                       ║");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.Write("                       ╚═══════════════════════════════════════╝");
         Console.ResetColor();
+        
+        Console.WriteLine();
+        
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+        Console.WriteLine($"                                    Version: {CurrentVersion}");
+        Console.ResetColor();
+        Console.WriteLine();
     }
 
     private static void PrintStep(int step, int total, string message, ConsoleColor color = ConsoleColor.White)
     {
-        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.ForegroundColor = ConsoleColor.DarkGray;
         Console.Write($"  [{step}/{total}] ");
         Console.ForegroundColor = color;
         Console.WriteLine(message);
@@ -142,6 +158,13 @@ public class Program
         Console.ForegroundColor = ConsoleColor.DarkGray;
         string dots = new string('.', dotCount);
         Console.Write($"\r  {message}{dots}");
+        Console.ResetColor();
+    }
+
+    private static void PrintDivider()
+    {
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+        Console.WriteLine("  ─────────────────────────────────────────────────────────────");
         Console.ResetColor();
     }
 
