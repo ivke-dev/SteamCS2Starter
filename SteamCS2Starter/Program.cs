@@ -102,6 +102,7 @@ public class Program
         Console.WriteLine("        ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
         Console.WriteLine("        █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█");
         Console.WriteLine("        █  Created by: IVKE ░░░░░░░░░░░░░░░░░░░█");
+        Console.WriteLine("        █  *** UPDATE TEST v1.0.2 *** ░░░░░░░░░░░█");
         Console.WriteLine("        █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█");
         Console.WriteLine("        ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
         Console.WriteLine();
