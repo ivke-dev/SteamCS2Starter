@@ -1,6 +1,6 @@
 # SteamCS2Starter v2.0.0
 
-**Universal Game Launcher for Steam and Epic Games with CS2 Auto-Launch Functionality**
+**Universal Game Launcher for Steam and Epic Games**
 
 ---
 
