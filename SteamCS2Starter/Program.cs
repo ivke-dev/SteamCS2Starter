@@ -110,10 +110,16 @@ public class Program
         var games = new List<GameInfo>();
         string? steamPath = FindSteamPath();
         
+        Console.WriteLine($"DEBUG: Steam path found: {steamPath}");
+        
         if (string.IsNullOrEmpty(steamPath))
+        {
+            Console.WriteLine("DEBUG: Steam not found");
             return games;
+        }
 
         string steamFolder = Path.GetDirectoryName(steamPath)!;
+        Console.WriteLine($"DEBUG: Steam folder: {steamFolder}");
         
         // Proveri standardne lokacije
         var standardPaths = new[] { 
@@ -128,12 +134,19 @@ public class Program
         
         foreach (string path in standardPaths)
         {
+            Console.WriteLine($"DEBUG: Checking path: {path}");
             if (Directory.Exists(path))
             {
+                Console.WriteLine($"DEBUG: Found directory: {path}");
                 ProcessSteamAppsFolder(path, games);
+            }
+            else
+            {
+                Console.WriteLine($"DEBUG: Directory not found: {path}");
             }
         }
 
+        Console.WriteLine($"DEBUG: Total games found: {games.Count}");
         return games.GroupBy(g => new { g.AppId, g.Platform })
                    .Select(g => g.First())
                    .OrderBy(g => g.Name)
@@ -142,10 +155,15 @@ public class Program
 
     private static void ProcessSteamAppsFolder(string appsPath, List<GameInfo> games)
     {
+        Console.WriteLine($"DEBUG: Processing folder: {appsPath}");
         if (!Directory.Exists(appsPath))
+        {
+            Console.WriteLine($"DEBUG: Folder does not exist: {appsPath}");
             return;
+        }
 
         var appManifestFiles = Directory.GetFiles(appsPath, "appmanifest_*.acf");
+        Console.WriteLine($"DEBUG: Found {appManifestFiles.Length} manifest files");
         
         foreach (string manifestFile in appManifestFiles)
         {
@@ -736,36 +754,18 @@ del ""%~f0""
     {
         PrintHeader();
 
-        PrintStep(0, 5, "Checking for updates...", ConsoleColor.Cyan);
-        var (hasUpdate, newVersion, downloadUrl) = await CheckForUpdate();
-
-        if (hasUpdate && !string.IsNullOrEmpty(downloadUrl))
-        {
-            Console.WriteLine();
-            PrintSuccess($"New version available: {newVersion}");
-            bool updated = await DownloadAndUpdate(downloadUrl);
-            if (updated)
-                return;
-        }
-        else if (newVersion != null)
-        {
-            PrintSuccess($"You have the latest version ({newVersion})");
-        }
-        else
-        {
-            Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine("  (Update check failed - continuing anyway)");
-            Console.ResetColor();
-        }
-
+        // Iskljuèujemo update proveru za sada da bi program radio stabilno
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+        Console.WriteLine("  Update check skipped for stability");
+        Console.ResetColor();
         Console.WriteLine();
 
-        PrintStep(1, 5, "Stopping Steam processes...", ConsoleColor.Yellow);
+        PrintStep(1, 4, "Stopping Steam processes...", ConsoleColor.Yellow);
         KillSteamProcesses();
         PrintSuccess("All Steam processes stopped");
         Console.WriteLine();
 
-        PrintStep(2, 5, "Finding Steam installation...", ConsoleColor.Yellow);
+        PrintStep(2, 4, "Finding Steam installation...", ConsoleColor.Yellow);
         string? steamPath = FindSteamPath();
         
         if (string.IsNullOrEmpty(steamPath) || !File.Exists(steamPath))
@@ -781,7 +781,7 @@ del ""%~f0""
         PrintSuccess($"Found at: {Path.GetDirectoryName(steamPath)}");
         Console.WriteLine();
 
-        PrintStep(3, 5, "Starting Steam...", ConsoleColor.Yellow);
+        PrintStep(3, 4, "Starting Steam...", ConsoleColor.Yellow);
         
         ProcessStartInfo psi = new()
         {
@@ -810,14 +810,14 @@ del ""%~f0""
         PrintSuccess("Steam is launching...");
         Console.WriteLine();
 
-        PrintStep(4, 5, "Waiting for Steam to initialize...", ConsoleColor.Yellow);
+        PrintStep(4, 4, "Waiting for Steam to initialize...", ConsoleColor.Yellow);
         bool steamReady = WaitForSteamReady();
         
         Console.WriteLine();
         if (!steamReady)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            PrintStep(4, 5, "WARNING: Steam may not be fully ready, continuing...", ConsoleColor.Yellow);
+            PrintStep(4, 4, "WARNING: Steam may not be fully ready, continuing...", ConsoleColor.Yellow);
         }
         else
         {
@@ -825,7 +825,7 @@ del ""%~f0""
         }
         Console.WriteLine();
 
-        PrintStep(5, 5, "Starting CS2...", ConsoleColor.Yellow);
+        PrintStep(4, 4, "Starting CS2...", ConsoleColor.Yellow);
         try
         {
             Process.Start(new ProcessStartInfo
