@@ -1,0 +1,15 @@
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\obj\Debug\net10.0-windows\SteamCS2Starter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\obj\Debug\net10.0-windows\SteamCS2Starter.AssemblyInfoInputs.cache
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\obj\Debug\net10.0-windows\SteamCS2Starter.AssemblyInfo.cs
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\obj\Debug\net10.0-windows\SteamCS2Starter.csproj.CoreCompileInputs.cache
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\obj\Debug\net10.0-windows\SteamCS2Starter.sourcelink.json
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\bin\Debug\net10.0-windows\SteamCS2Starter.exe
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\bin\Debug\net10.0-windows\SteamCS2Starter.deps.json
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\bin\Debug\net10.0-windows\SteamCS2Starter.runtimeconfig.json
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\bin\Debug\net10.0-windows\SteamCS2Starter.dll
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\bin\Debug\net10.0-windows\SteamCS2Starter.pdb
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\obj\Debug\net10.0-windows\SteamCS2Starter.dll
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\obj\Debug\net10.0-windows\refint\SteamCS2Starter.dll
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\obj\Debug\net10.0-windows\SteamCS2Starter.pdb
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\obj\Debug\net10.0-windows\SteamCS2Starter.genruntimeconfig.cache
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\SteamCS2Starter\obj\Debug\net10.0-windows\ref\SteamCS2Starter.dll
