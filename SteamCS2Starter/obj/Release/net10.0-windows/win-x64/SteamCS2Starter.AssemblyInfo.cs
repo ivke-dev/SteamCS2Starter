@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A simple tool to restart Steam and launch CS2")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.8.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.8+c6a70a7911328a63bb454f2aeb02fa4e4b413aab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.8+b176cc27963044a48860db9f5d1417cbb5d0ac2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("SteamCS2Starter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SteamCS2Starter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.8.0")]

@@ -721,15 +721,15 @@ del ""%~f0""
 
     public static async Task Main(string[] args)
     {
-        // Proveri da li je pozvan sa --games argumentom za novi mod
-        if (args.Contains("--games"))
+        // Proveri da li je pozvan sa --cs2 argumentom za originalni mod
+        if (args.Contains("--cs2"))
         {
-            await RunGameLauncher();
+            await RunOriginalCS2Starter(args);
             return;
         }
         
-        // Inache pokreni originalnu CS2 starter funkcionalnost
-        await RunOriginalCS2Starter(args);
+        // Inače pokreni game browser mod (default)
+        await RunGameLauncher();
     }
 
     private static async Task RunOriginalCS2Starter(string[] args)

@@ -14,17 +14,17 @@ Very useful when CS2 is stuck, won't start, or you have connection issues. Also 
 
 ### How to Use
 
-#### 1. CS2 Auto-Launch (Original Mode)
+#### 1. Games Browser Mode (Default)
 Just run **`SteamCS2Starter.exe`**  
-The program will automatically restart Steam and launch CS2.
-
-#### 2. Games Browser Mode (NEW!)
-Run **`SteamCS2Starter.exe --games`** to access the game browser:
+The program will open the game browser where you can:
 
 - Browse all your Steam and Epic Games
 - View game information (size, platform)
 - Launch any game directly
 - Beautiful console interface with color coding
+
+#### 2. CS2 Auto-Launch (Original Mode)
+Run **`SteamCS2Starter.exe --cs2`** to automatically restart Steam and launch CS2.
 
 #### 3. Using Commands (Advanced)
 
@@ -32,20 +32,20 @@ You can also run it from Command Prompt or PowerShell with these options:
 
 | Command                                      | Description |
 |---------------------------------------------|-----------|
-| `SteamCS2Starter.exe`                       | Start Steam + CS2 (default) |
+| `SteamCS2Starter.exe`                       | **NEW DEFAULT!** Open games browser mode |
+| `SteamCS2Starter.exe --cs2`                 | Start Steam + CS2 (original mode) |
 | `SteamCS2Starter.exe --restart`             | Restart Steam and then launch CS2 |
 | `SteamCS2Starter.exe --steam-only`          | Restart Steam only (no CS2) |
 | `SteamCS2Starter.exe --silent`              | Run without showing console window |
-| `SteamCS2Starter.exe --games`               | **NEW!** Open games browser mode |
 | `SteamCS2Starter.exe --help`                | Show all available commands |
 
 **Examples:**
 ```cmd
-# Launch CS2 automatically
+# Browse and launch any game (default)
 SteamCS2Starter.exe
 
-# Browse and launch any game
-SteamCS2Starter.exe --games
+# Launch CS2 automatically
+SteamCS2Starter.exe --cs2
 
 # Restart Steam only
 SteamCS2Starter.exe --steam-only
