@@ -12,12 +12,13 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("IVKE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("A simple tool to restart Steam and launch CS2")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.8.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.8+b176cc27963044a48860db9f5d1417cbb5d0ac2d")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute(("A powerful tool for Steam and Epic Games management with CS2 auto-launch function" +
+    "ality"))]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.0+a9e806d559ac6e3c8c2ae5a03d31ad098164b95c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SteamCS2Starter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SteamCS2Starter")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.8.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("2.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
 
