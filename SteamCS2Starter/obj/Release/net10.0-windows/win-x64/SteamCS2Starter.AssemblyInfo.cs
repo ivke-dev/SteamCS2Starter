@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute(("A powerful tool for Steam and Epic Games management with CS2 auto-launch function" +
     "ality"))]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.0+a9e806d559ac6e3c8c2ae5a03d31ad098164b95c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.0+dace06a4a416116f8f620008f2bde25c899b5733")]
 [assembly: System.Reflection.AssemblyProductAttribute("SteamCS2Starter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SteamCS2Starter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.0.0.0")]

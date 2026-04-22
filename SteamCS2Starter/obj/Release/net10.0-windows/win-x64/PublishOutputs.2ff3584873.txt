@@ -1,0 +1,2 @@
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\bin\SingleFile\SteamCS2Starter.pdb
+C:\Users\ivanu\Desktop\steam starter\SteamCS2Starter\bin\SingleFile\SteamCS2Starter.exe

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LGoeynxf74g=",
+  "dgSpecHash": "TFEunBv0NJU=",
   "success": true,
   "projectFilePath": "C:\\Users\\ivanu\\Desktop\\steam starter\\SteamCS2Starter\\SteamCS2Starter\\SteamCS2Starter.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ivanu\\.nuget\\packages\\microsoft.net.illink.tasks\\10.0.5\\microsoft.net.illink.tasks.10.0.5.nupkg.sha512",
     "C:\\Users\\ivanu\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\10.0.5\\microsoft.netcore.app.runtime.win-x64.10.0.5.nupkg.sha512",
     "C:\\Users\\ivanu\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\10.0.5\\microsoft.windowsdesktop.app.runtime.win-x64.10.0.5.nupkg.sha512",
     "C:\\Users\\ivanu\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\10.0.5\\microsoft.aspnetcore.app.runtime.win-x64.10.0.5.nupkg.sha512"
