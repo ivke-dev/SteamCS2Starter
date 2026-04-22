@@ -1,109 +1,109 @@
 # SteamCS2Starter v2.0.0
 
-**Univerzalni game launcher za Steam i Epic Games sa CS2 auto-launch funkcionalno**
+**Universal Game Launcher for Steam and Epic Games with CS2 Auto-Launch Functionality**
 
 ---
 
-## Ovo je program koji omoguava:
+## What this program enables:
 
 ### Game Browser Mode (Default)
-- **Pregled svih igara** iz Steam i Epic Games biblioteka
-- **Automatska detekcija** instaliranih igara
-- **Jednostavno pokretanje** bilo koje igre jednim klikom
-- **Prikaz informacija** o igrama (veliina, platforma, naziv)
-- **Lep konzolni interfejs** sa bojenim prikazom
+- **Browse all games** from Steam and Epic Games libraries
+- **Automatic detection** of installed games
+- **Easy launching** of any game with one click
+- **Display game information** (size, platform, name)
+- **Beautiful console interface** with color-coded display
 
 ### CS2 Auto-Launch Mode
-- **Automatsko restartovanje Steam-a**
-- **Pokretanje Counter-Strike 2**
-- **Rezolviranje problema** kada se CS2 ne moze pokrenuti
+- **Automatic Steam restart**
+- **Launch Counter-Strike 2**
+- **Resolve issues** when CS2 won't start
 
 ---
 
-## Kori&scaron;&cacute;enje
+## Usage
 
-### 1. Game Browser Mode (Podrazumevano)
-Pokreni `SteamCS2Starter.exe` bez argumenata:
+### 1. Game Browser Mode (Default)
+Run `SteamCS2Starter.exe` without arguments:
 
 ```
 SteamCS2Starter.exe
 ```
 
-Program &cacute;e otvoriti meni za izbor platforme:
-- **[1]** Steam igre
-- **[2]** Epic Games igre  
-- **[3]** Sve igre
-- **[0]** Izlaz
+The program will open a platform selection menu:
+- **[1]** Steam games
+- **[2]** Epic Games games  
+- **[3]** All games
+- **[0]** Exit
 
-Nakon izbora platforme, vide&cacute; listu svih igara sa brojevima. Unesite broj igre koju &uacute;elite da pokrenete.
+After selecting a platform, you'll see a list of all games with numbers. Enter the number of the game you want to launch.
 
 ### 2. CS2 Auto-Launch Mode
-Za automatsko pokretanje CS2:
+For automatic CS2 launch:
 
 ```
 SteamCS2Starter.exe --cs2
 ```
 
-### 3. Ostale opcije
+### 3. Other Options
 
-| Komanda                               | Opis |
-|--------------------------------------|------|
+| Command                              | Description |
+|--------------------------------------|------------|
 | `SteamCS2Starter.exe`                  | Game browser mode (default) |
 | `SteamCS2Starter.exe --cs2`            | CS2 auto-launch |
-| `SteamCS2Starter.exe --restart`        | Restartuj Steam pa CS2 |
-| `SteamCS2Starter.exe --steam-only`     | Samo restart Steam-a |
-| `SteamCS2Starter.exe --silent`         | Bez prikaza konzole |
+| `SteamCS2Starter.exe --restart`        | Restart Steam then CS2 |
+| `SteamCS2Starter.exe --steam-only`     | Restart Steam only |
+| `SteamCS2Starter.exe --silent`         | Run without console display |
 
 ---
 
-## Mogu&cacute;nosti
+## Features
 
 ### Game Browser
-- **Automatska detekcija** Steam i Epic Games instalacija
-- **Pregled svih igara** sa informacijama o veliini
-- **Bojeni prikaz**: 
-  - Zelena za Steam igre
-  - Ljubi&ccaron;asta za Epic Games igre
-- **Direktno pokretanje** igara bez potrebe za otvaranjem platformi
+- **Automatic detection** of Steam and Epic Games installations
+- **Browse all games** with size information
+- **Color-coded display**: 
+  - Green for Steam games
+  - Magenta for Epic Games games
+- **Direct launching** of games without opening platforms
 
 ### CS2 Auto-Launch
-- **Ubija sve Steam procese** da o&ccaron;isti probleme
-- **Restartuje Steam** u silent modu
-- &Ccaron;eka da se Steam u&ccaron;ita
-- **Automatski pokre&ccaron;e CS2**
+- **Kill all Steam processes** to clear issues
+- **Restart Steam** in silent mode
+- **Wait for Steam** to load
+- **Automatically launch** CS2
 
 ---
 
-## Sistemski zahtevi
+## System Requirements
 
 - Windows 10/11 (x64)
-- Steam (za Steam igre)
-- Epic Games Launcher (za Epic igre)
-- .NET Runtime 10.0 (ugra&dstrok;en u .exe fajlu)
+- Steam (for Steam games)
+- Epic Games Launcher (for Epic games)
+- .NET Runtime 10.0 (included in .exe file)
 
 ---
 
-## Instalacija
+## Installation
 
-1. Preuzmite `SteamCS2Starter.exe` (73.5 MB)
-2. Postavite ga u bilo koji folder
-3. Pokrenite duplim klikom
+1. Download `SteamCS2Starter.exe` (73.5 MB)
+2. Place it in any folder
+3. Run with double click
 
-**Napomena**: Program je samostalan - ne trebaju mu dodatni fajlovi!
-
----
-
-## Verzija 2.0.0 - Novo u ovoj verziji:
-
-- &checkmark; **Epic Games podr&scaron;ka** - sada podr&zcaron;ava i Epic igre
-- &checkmark; **Game browser mode** - podrazumevani mod za pregled igara
-- &checkmark; **Single-file build** - sve u jednom .exe fajlu
-- &checkmark; **Bolja detekcija** igara sa vi&scaron;e library path-ova
-- &checkmark; **Unapre&dstrok;en interfejs** sa lepim ASCII art-om
+**Note**: The program is self-contained - no additional files needed!
 
 ---
 
-## Autor
+## Version 2.0.0 - What's New:
+
+- &checkmark; **Epic Games support** - now supports Epic games too
+- &checkmark; **Game browser mode** - default mode for browsing games
+- &checkmark; **Single-file build** - everything in one .exe file
+- &checkmark; **Better detection** of games with multiple library paths
+- &checkmark; **Enhanced interface** with beautiful ASCII art
+
+---
+
+## Author
 
 **IVKE** - ivke-dev
 
