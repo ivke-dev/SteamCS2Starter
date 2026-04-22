@@ -112,7 +112,3 @@ SteamCS2Starter.exe --cs2
 ## Download
 
 [https://github.com/ivke-dev/SteamCS2Starter](https://github.com/ivke-dev/SteamCS2Starter)
-
----
-
-**U&zivajte u gaming-u! &udb83c;&udfae;**
